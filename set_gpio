@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cd /sys/class/gpio               # change directory where all GPIOs are
+echo 21 | sudo tee export        # add GPIO 21 to the list   
+cd gpio21                        # change directory to GPIO21           
+echo out | sudo tee direction    # change GPIO21 to output
+
+exec bash                        # child bash for cd command
