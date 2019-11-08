@@ -1,6 +1,6 @@
 #!/bin/bash
 
 cd /sys/class/gpio               # change directory where all GPIOs are
-echo 21 | sudo tee unexport        # add GPIO 21 to the list   
+echo 1 | sudo tee unexport        # add GPIO 21 to the list   
 
 exec bash  
