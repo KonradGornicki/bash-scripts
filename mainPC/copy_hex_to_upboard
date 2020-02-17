@@ -1,0 +1,12 @@
+#!/bin/bash
+
+lines=$(sudo find /tmp/ -name "closed_loop.ino.hex" | wc -l)      
+
+if [ $lines -eq 0 ]
+then
+    echo "HEX file not found"
+else 
+    echo "copying files..."
+    sudo find /tmp/ -name "closed_loop.ino.hex" -exec scp {} konrad@10.42.0.1:/home/konrad/teensy_hex_files \;
+
+fi                 
