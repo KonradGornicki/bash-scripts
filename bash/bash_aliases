@@ -1,0 +1,18 @@
+alias cpwd='pwd | xclip'
+alias cdpaste='cd `xclip -o`'
+
+alias t4='terminator -l t4'
+alias t3='terminator -l t3'
+alias t2='terminator -l t2'
+
+alias ssh_upboard='ssh konrad@10.42.0.1'
+alias ssh_up2408='ssh up2408@10.42.0.2'
+#to mount remote host on local machine:  name@remoteIP:/path/to/file  /where/to/mount/on/this/machine
+alias mnt_upborad='sudo sshfs -o allow_other konrad@10.42.0.1:/home/konrad/ /media/upboard'
+alias mnt_up2408='sudo sshfs -o allow_other up2408@10.42.0.2:/home/up2408/ /media/up2408'
+
+#to export local IP to remote ros master:  ROS_MASTER = defines who is the master && ROS_IP = defines IP to export
+alias export_ROS_toUP2408='export ROS_MASTER_URI=http://10.42.0.2:11311 && export ROS_IP=10.42.0.230'
+alias export_ROS_toSELF='export ROS_MASTER_URI=http://10.42.0.230:11311 && export ROS_IP=10.42.0.230'
+alias export_ROS_toUPBOARD='export ROS_MASTER_URI=http://10.42.0.1:11311 && export ROS_IP=10.42.0.230'
+
